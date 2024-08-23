@@ -1,0 +1,108 @@
+{
+    "body": {
+      "privateid": "b3db2542-c566-47e8-9579-1b2216c3fb47",
+      "map": "TestMapArea",
+      "servername": "Your Server Name",
+      "serverclock": "Day 1, 12:00:00",
+      "mbp_small": {
+        "1498930240": {
+          "tribeid": "1498930240",
+          "x_pos": "82.290821",
+          "y_pos": "128.248001",
+          "x_ue4": "2326.530518",
+          "y_ue4": "9983.979492",
+          "z_ue4": "12.474365",
+          "tribename": "TribeA",
+          "decayDestructionTime": "345600.0",
+          "lastInAllyRangeTime": "153.028500",
+          "elapsedTime": "151"
+        },
+        "1679572956": {
+          "tribeid": "1679572956",
+          "x_pos": "34.856529",
+          "y_pos": "51.260635",
+          "x_ue4": "-1147.796631",
+          "y_ue4": "10085.039063",
+          "z_ue4": "12.47435",
+          "tribename": "TribeB",
+          "decayDestructionTime": "345600.0",
+          "lastInAllyRangeTime": "153.028500",
+          "elapsedTime": "151"
+        }
+      },
+      "mbp_large": {
+        "1498930240": {
+          "tribeid": "1498930240",
+          "x_pos": "18.290821",
+          "y_pos": "23.248001",
+          "x_ue4": "2326.530518",
+          "y_ue4": "9983.979492",
+          "z_ue4": "12.474365",
+          "tribename": "TribeA",
+          "decayDestructionTime": "345600.0",
+          "lastInAllyRangeTime": "153.028500",
+          "elapsedTime": "151"
+        },
+        "1679572956": {
+          "tribeid": "1679572956",
+          "x_pos": "56.856529",
+          "y_pos": "78.260635",
+          "x_ue4": "-1147.796631",
+          "y_ue4": "10085.039063",
+          "z_ue4": "12.47435",
+          "tribename": "TribeB",
+          "decayDestructionTime": "345600.0",
+          "lastInAllyRangeTime": "153.028500",
+          "elapsedTime": "151"
+        }
+      },
+      "mbp_admin": {
+        "1498930240": {
+          "tribeid": "1498930240",
+          "x_pos": "78.290821",
+          "y_pos": "51.248001",
+          "x_ue4": "2326.530518",
+          "y_ue4": "9983.979492",
+          "z_ue4": "12.474365",
+          "tribename": "TribeA",
+          "decayDestructionTime": "345600.0",
+          "lastInAllyRangeTime": "153.028500",
+          "elapsedTime": "151"
+        },
+        "1679572956": {
+          "tribeid": "1679572956",
+          "x_pos": "59.856529",
+          "y_pos": "21.260635",
+          "x_ue4": "-1147.796631",
+          "y_ue4": "10085.039063",
+          "z_ue4": "12.47435",
+          "tribename": "TribeB",
+          "decayDestructionTime": "345600.0",
+          "lastInAllyRangeTime": "153.028500",
+          "elapsedTime": "151"
+        }
+      },
+      "players": {
+        "111111111": {
+          "steamid": "111111111",
+          "x_pos": "65.176224",
+          "y_pos": "151.147388",
+          "x_ue4": "1409.789673",
+          "y_ue4": "9179.100586",
+          "z_ue4": "108.124367",
+          "playername": "Survivor",
+          "tribename": "TribeA"
+        },
+        "222222222": {
+          "steamid": "222222222",
+          "x_pos": "34.0",
+          "y_pos": "85.0",
+          "x_ue4": "0.0",
+          "y_ue4": "0.0",
+          "z_ue4": "1.0",
+          "playername": "Survivor",
+          "tribename": "TribeB"
+        }
+      }
+    }
+  }
