@@ -1,7 +1,7 @@
 {
     "body": {
       "privateid": "b3db2542-c566-47e8-9579-1b2216c3fb47",
-      "map": "TestMapArea",
+      "map": "TheIsland_WP",
       "servername": "Your Server Name",
       "serverclock": "Day 1, 12:00:00",
       "mbp_small": {
@@ -105,4 +105,4 @@
         }
       }
     }
-  }
+}

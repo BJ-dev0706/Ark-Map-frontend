@@ -1,13 +1,19 @@
 import { MapContainer, ImageOverlay, Marker, Popup } from 'react-leaflet';
 import { useEffect, useState, useCallback } from 'react';
-import io from 'socket.io-client';
+// import io from 'socket.io-client';
 import L from "leaflet";
 import 'leaflet/dist/leaflet.css';
 import React from 'react';
 import data from "../Source/MapData.json";
 import { MBP_Small, MBP_Large, MBP_Admin, Players } from '../Source/convert';
+import { useNavigate } from 'react-router-dom';
+import { SelectAuth } from "../redux/authSlice";
+import { SelectManage } from '../redux/manageSlice';
+import { useSelector } from 'react-redux';
+import { Button, Drawer } from 'antd';
+import { getMaps } from '../services/manageService';
 
-const socket = io('http://localhost:5200'); // Replace with your backend URL
+// const socket = io('http://localhost:5200'); // Replace with your backend URL
 
 const Map = () => {
 
@@ -15,19 +21,38 @@ const Map = () => {
   const [mbp_Large, setMBP_Large] = useState([]);
   const [mbp_Admin, setMBP_Admin] = useState([]);
   const [players, setPlayers] = useState([]);
+  const navigate = useNavigate();
+  const UserData = useSelector(SelectAuth);
+  const { Maps } = useSelector(SelectManage);
+  const [open, setOpen] = React.useState(false);
+  const [loading, setLoading] = React.useState(true);
+  const showLoading = () => {
+    setOpen(true);
+    setLoading(true);
+  };
 
   const handleSocketData = useCallback((data) => {
     console.log(data);
   }, []);
 
   useEffect(() => {
-   // Listen for initial data from the server
-    socket.on('init', handleSocketData);
+    getMaps();
+  }, []);
 
-    return () => {
-      socket.off('init');
-    };
-  }, [handleSocketData]);
+  useEffect(() => {
+    if (UserData && Object.keys(UserData).length === 0) {
+      navigate('/');      
+    }
+    console.log(Maps);
+    
+    if (Maps) {
+      setLoading(false);
+    }
+    // socket.on('init', handleSocketData);
+    // return () => {
+    //   socket.off('init');
+    // };
+  }, [handleSocketData, navigate, UserData, Maps]);
   
   useEffect(() => {
     setMBP_Small(MBP_Small(data));
@@ -38,9 +63,34 @@ const Map = () => {
   return (
     <div>
       <div className='absolute top-0 left-1/2 -translate-x-1/2 bg-[#00000080] text-white p-3 rounded-bl-md rounded-br-md shadow-md  shadow-blue-400 z-[1001]'>Server Time: {data.body.serverclock ? data.body.serverclock : "Day ? : ?? : ?? : ??"}</div>
-      <MapContainer center={[70, 100]} zoom={2} minZoom={1} maxZoom={6} className='w-full h-screen'>
+      <Button type="primary" onClick={showLoading}>
+        Open Drawer
+      </Button>
+      <Drawer
+        closable
+        destroyOnClose
+        title={<p>Loading Drawer</p>}
+        placement="right"
+        open={open}
+        loading={loading}
+        onClose={() => setOpen(false)}
+      >
+        <Button
+          type="primary"
+          style={{
+            marginBottom: 16,
+          }}
+          onClick={showLoading}
+        >
+          Reload
+        </Button>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Drawer>
+      <MapContainer center={[70, 100]} zoom={3} minZoom={1} maxZoom={6} className='w-full h-screen'>
         <ImageOverlay
-          url="/TheIsland_WP.jpg"
+          url={`/${data.body.map}.jpg`}
           bounds={[[0, 0], [200, 200]]}
         />
         {mbp_Small && mbp_Small.map((marker, index) => (
