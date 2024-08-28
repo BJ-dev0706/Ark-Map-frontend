@@ -12,9 +12,9 @@ const PlayBtn = () => {
             Play Now
         </p>
         <p
-            className="absolute z-40 top-1/2 left-1/2 bg-gradient-to-r from-red-700 to-orange-700 bg-clip-text text-transparent -translate-x-1/2 translate-y-full h-full w-full transition-all duration-300 group-hover:-translate-y-[40%] tracking-widest font-extrabold"
+            className="absolute z-40 top-1/2 left-1/2 bg-gradient-to-r from-red-700 to-orange-700 bg-clip-text text-transparent -translate-x-1/2 translate-y-full h-full w-full transition-all duration-300 group-hover:-translate-y-[30%] tracking-widest font-extrabold"
         >
-            Rory
+            Click
         </p>
         <svg
             className="absolute w-full h-full scale-x-125 rotate-180 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 group-hover:animate-none animate-pulse group-hover:-translate-y-[45%] transition-all duration-300"
@@ -27,12 +27,12 @@ const PlayBtn = () => {
             <linearGradient id="sssurf-grad" y2="100%" x2="50%" y1="0%" x1="50%">
                 <stop
                 offset="0%"
-                stop-opacity="1"
+                stopOpacity="1"
                 stop-color="hsl(37, 99%, 67%)"
                 ></stop>
                 <stop
                 offset="100%"
-                stop-opacity="1"
+                stopOpacity="1"
                 stop-color="hsl(316, 73%, 52%)"
                 ></stop>
             </linearGradient>

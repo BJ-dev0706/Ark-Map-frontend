@@ -158,7 +158,7 @@ const Map = () => {
                 shadowAnchor: [0, 37]
               })}
             >
-              <Popup offset={[0, -15]}>
+              <Popup position="top" offset={[0, -15]}>
                 <div className='text-center'>{marker.tribename}</div>
                 <div>{marker.x_ue4}, {marker.y_ue4}, {marker.z_ue4}</div>
                 <div>{marker.decayDestructionTime}, {marker.lastInAllyRangeTime}</div>
@@ -181,7 +181,7 @@ const Map = () => {
                 shadowAnchor: [0, 37]
               })}
             >
-              <Popup offset={[-12, -35]}>
+              <Popup position="top" offset={[-12, -35]}>
                 <div className='text-center'>{marker.tribename}</div>
                 <div>{marker.x_ue4}, {marker.y_ue4}, {marker.z_ue4}</div>
                 <div>{marker.decayDestructionTime}, {marker.lastInAllyRangeTime}</div>
@@ -207,7 +207,7 @@ const Map = () => {
                 shadowAnchor: [0, 37]
               })}
             >
-              <Popup offset={[0, -15]}>
+              <Popup position="top" offset={[0, -15]}>
                 <div className='text-center'>{marker.playername}</div>
                 <div className='text-center'>{marker.tribename}</div>
                 <div>{marker.x_ue4}, {marker.y_ue4}, {marker.z_ue4}</div>

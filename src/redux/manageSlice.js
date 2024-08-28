@@ -4,22 +4,25 @@ export const manageSlice = createSlice({
   name: 'manage',
   initialState: {
     Users: [],
-    Maps: []
+    Maps: [],
+    loading: false
   },
   reducers: {
     SetUsers: (state, action) => {
-      console.log(state, action);
       state.Users= action.payload;      
     },
     SetMaps: (state, action) => {
-      console.log(state, action);
+      state.loading = false;
       state.Maps= action.payload;      
+    },
+    SetLoading: (state) => {
+      state.loading = true;
     }
   },
 })
 
 export const SelectManage = (state) => state.manage;
 
-export const { SetUsers, SetMaps } = manageSlice.actions
+export const { SetUsers, SetMaps, SetLoading } = manageSlice.actions
 
 export default manageSlice.reducer;

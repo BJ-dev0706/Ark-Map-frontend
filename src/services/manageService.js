@@ -2,14 +2,13 @@ import axios from 'axios';
 import { SetUsers, SetMaps } from '../redux/manageSlice';
 import store from '../redux/store';
 import { message, notification } from 'antd';
+import { SetLoading } from '../redux/manageSlice'; 
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5500/api';
 
 export const getUsers = async (retryCount = 0) => {
     try {
       const response = await axios.get(`${API_URL}/manage/users`);
-      console.log(response);
-      
       store.dispatch(SetUsers(response.data.users));
     } catch (error) {
         if (error.response && error.response.status === 429) {
@@ -35,7 +34,6 @@ export const getUsers = async (retryCount = 0) => {
 export const setPermission = async (id) => {
     try {
         const response = await axios.get(`${API_URL}/manage/users/${id}`);
-        console.log(response.data);
         getUsers()
         message.success(response.data.message)
     } catch (error) {
@@ -51,7 +49,6 @@ export const setPermission = async (id) => {
 export const deleteUser = async (id) => {
     try {
         const response = await axios.delete(`${API_URL}/manage/users/${id}`);
-        console.log(response.data);
         getUsers()
         message.success(response.data.message)
     } catch (error) {
@@ -67,7 +64,6 @@ export const deleteUser = async (id) => {
 export const changePassword = async (id) => {
     try {
         const response = await axios.put(`${API_URL}/manage/users/${id}`);
-        console.log(response.data);
         getUsers()
         message.success(response.data.message, 5000);
     } catch (error) {
@@ -81,9 +77,9 @@ export const changePassword = async (id) => {
 };
 
 export const getMaps = async (retryCount = 0) => {
+    SetLoading();
     try {
       const response = await axios.get(`${API_URL}/manage/maps`);
-      
       store.dispatch(SetMaps(response.data.maps));
     } catch (error) {
       if (error.response && error.response.status === 429) {

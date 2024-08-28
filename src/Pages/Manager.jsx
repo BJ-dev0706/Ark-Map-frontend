@@ -6,6 +6,8 @@ import { getUsers, setPermission, deleteUser, changePassword, getMaps, deleteMap
 import { SelectManage } from '../redux/manageSlice';
 import FileUpload from "../component/FileUpload";
 import Loader from "../component/Loading";
+import { SelectAuth } from "../redux/authSlice";
+import { useNavigate } from "react-router-dom";
 
 const API_URL = process.env.APP_API_URL || 'http://localhost:5500/api';
 
@@ -67,12 +69,19 @@ const Delete = ({id}) => {
 }
 
 const Manager = () => {
-    // const dispatch = useDispatch();
-    const {Users, Maps} = useSelector(SelectManage);
+    const UserData = useSelector(SelectAuth);
+    const {Users, Maps, loading} = useSelector(SelectManage);
+    const navigate = useNavigate();
     useEffect(() => {
         getUsers();
         getMaps();
     }, []);
+
+    useEffect(() => {
+        if (UserData.auth !== "manager") {
+            navigate("/map")
+        }        
+    }, [UserData, navigate])
     
     const items = [
         {
@@ -91,7 +100,7 @@ const Manager = () => {
                                             <path d="M17.5 17.5L15.4167 15.4167M15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333C11.0005 15.8333 12.6614 15.0929 13.8667 13.8947C15.0814 12.6872 15.8333 11.0147 15.8333 9.16667Z" stroke="black" strokeOpacity="0.2" strokeWidth="1.6" strokeLinecap="round" />
                                         </svg>
                                     </div>
-                                    <input type="text" id="default-search" className="block w-80 h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="Search for company" />
+                                    <input type="text" id="default-search" className="block w-80 h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="Search for email" />
                                 </div>
                                 <div className="overflow-hidden ">
                                     <table className=" min-w-full rounded-xl">
@@ -142,7 +151,7 @@ const Manager = () => {
             key: "maps",
             label: <span className="text-white">Maps</span>,
             children: 
-                Object.keys(Maps).length !== 0 ? 
+                !loading ? 
                     <div className="mt-10">
                         <Row gutter={16} align={"middle"}>
                             {

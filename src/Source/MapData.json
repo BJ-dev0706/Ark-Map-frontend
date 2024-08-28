@@ -1,108 +1,133 @@
-{
-    "body": {
-      "privateid": "b3db2542-c566-47e8-9579-1b2216c3fb47",
-      "map": "TheIsland_WP",
-      "servername": "Your Server Name",
-      "serverclock": "Day 1, 12:00:00",
-      "mbp_small": {
-        "1498930240": {
-          "tribeid": "1498930240",
-          "x_pos": "82.290821",
-          "y_pos": "128.248001",
-          "x_ue4": "2326.530518",
-          "y_ue4": "9983.979492",
-          "z_ue4": "12.474365",
-          "tribename": "TribeA",
-          "decayDestructionTime": "345600.0",
-          "lastInAllyRangeTime": "153.028500",
-          "elapsedTime": "151"
-        },
-        "1679572956": {
-          "tribeid": "1679572956",
-          "x_pos": "34.856529",
-          "y_pos": "51.260635",
-          "x_ue4": "-1147.796631",
-          "y_ue4": "10085.039063",
-          "z_ue4": "12.47435",
-          "tribename": "TribeB",
-          "decayDestructionTime": "345600.0",
-          "lastInAllyRangeTime": "153.028500",
-          "elapsedTime": "151"
-        }
-      },
-      "mbp_large": {
-        "1498930240": {
-          "tribeid": "1498930240",
-          "x_pos": "18.290821",
-          "y_pos": "23.248001",
-          "x_ue4": "2326.530518",
-          "y_ue4": "9983.979492",
-          "z_ue4": "12.474365",
-          "tribename": "TribeA",
-          "decayDestructionTime": "345600.0",
-          "lastInAllyRangeTime": "153.028500",
-          "elapsedTime": "151"
-        },
-        "1679572956": {
-          "tribeid": "1679572956",
-          "x_pos": "56.856529",
-          "y_pos": "78.260635",
-          "x_ue4": "-1147.796631",
-          "y_ue4": "10085.039063",
-          "z_ue4": "12.47435",
-          "tribename": "TribeB",
-          "decayDestructionTime": "345600.0",
-          "lastInAllyRangeTime": "153.028500",
-          "elapsedTime": "151"
-        }
-      },
-      "mbp_admin": {
-        "1498930240": {
-          "tribeid": "1498930240",
-          "x_pos": "78.290821",
-          "y_pos": "51.248001",
-          "x_ue4": "2326.530518",
-          "y_ue4": "9983.979492",
-          "z_ue4": "12.474365",
-          "tribename": "TribeA",
-          "decayDestructionTime": "345600.0",
-          "lastInAllyRangeTime": "153.028500",
-          "elapsedTime": "151"
-        },
-        "1679572956": {
-          "tribeid": "1679572956",
-          "x_pos": "59.856529",
-          "y_pos": "21.260635",
-          "x_ue4": "-1147.796631",
-          "y_ue4": "10085.039063",
-          "z_ue4": "12.47435",
-          "tribename": "TribeB",
-          "decayDestructionTime": "345600.0",
-          "lastInAllyRangeTime": "153.028500",
-          "elapsedTime": "151"
-        }
-      },
-      "players": {
-        "111111111": {
-          "steamid": "111111111",
-          "x_pos": "65.176224",
-          "y_pos": "151.147388",
-          "x_ue4": "1409.789673",
-          "y_ue4": "9179.100586",
-          "z_ue4": "108.124367",
-          "playername": "Survivor",
-          "tribename": "TribeA"
-        },
-        "222222222": {
-          "steamid": "222222222",
-          "x_pos": "34.0",
-          "y_pos": "85.0",
-          "x_ue4": "0.0",
-          "y_ue4": "0.0",
-          "z_ue4": "1.0",
-          "playername": "Survivor",
-          "tribename": "TribeB"
-        }
-      }
-    }
+{"body":{"privateid":"66cb139634f39404fb61a111",
+      "map":"TheIsland_WP",
+      "servername":"lastInAllyRangeTime",
+      "serverclock":"Day 1, 11:55:00",
+"mbp_small":{
+  "1641068208":{
+            "tribeid":"1641068208",
+            "x_pos":"51.065845",
+            "y_pos":"50.587799",
+            "x_ue4":"7309.576666",
+            "y_ue4":"4031.135833",
+            "z_ue4":"19.999999",
+            "tribename":"",
+            "decayDestructionTime":"0",
+            "lastInAllyRangeTime":"0",
+            "elapsedTime":"0"
+},"1668100561":{
+            "tribeid":"1668100561",
+            "x_pos":"49.579948",
+            "y_pos":"49.806782",
+            "x_ue4":"-2880.702667",
+            "y_ue4":"-1325.089939",
+            "z_ue4":"20.0",
+            "tribename":"",
+            "decayDestructionTime":"0",
+            "lastInAllyRangeTime":"0",
+            "elapsedTime":"0"
+},"1119088380":{
+            "tribeid":"1119088380",
+            "x_pos":"54.332821",
+            "y_pos":"53.075157",
+            "x_ue4":"29714.477458",
+            "y_ue4":"21089.427816",
+            "z_ue4":"19.978271",
+            "tribename":"",
+            "decayDestructionTime":"0",
+            "lastInAllyRangeTime":"0",
+            "elapsedTime":"0"
+}},
+"mbp_large":{"1641068208":{
+            "tribeid":"1641068208",
+            "x_pos":"50.976963",
+            "y_pos":"48.924438",
+            "x_ue4":"6700.009599",
+            "y_ue4":"-7376.197747",
+            "z_ue4":"19.974364",
+            "tribename":"",
+            "decayDestructionTime":"0",
+            "lastInAllyRangeTime":"0",
+            "elapsedTime":"0"
+},"1119088380":{
+            "tribeid":"1119088380",
+            "x_pos":"53.550484",
+            "y_pos":"53.029163",
+            "x_ue4":"24349.223197",
+            "y_ue4":"20773.997327",
+            "z_ue4":"19.978275",
+            "tribename":"",
+            "decayDestructionTime":"0",
+            "lastInAllyRangeTime":"0",
+            "elapsedTime":"0"
+},"1842101346":{
+            "tribeid":"1842101346",
+            "x_pos":"54.431545",
+            "y_pos":"53.420925",
+            "x_ue4":"30391.530469",
+            "y_ue4":"23460.714009",
+            "z_ue4":"19.978271",
+            "tribename":"",
+            "decayDestructionTime":"0",
+            "lastInAllyRangeTime":"0",
+            "elapsedTime":"0"
+}},
+"mbp_admin":{"11190884380":{
+            "tribeid":"1119088380",
+            "x_pos":"50.086319",
+            "y_pos":"51.246056",
+            "x_ue4":"591.985789",
+            "y_ue4":"8545.455015",
+            "z_ue4":"19.974365",
+            "tribename":"",
+            "decayDestructionTime":"0",
+            "lastInAllyRangeTime":"0",
+            "elapsedTime":"0"
+},"1119088334":{
+            "tribeid":"1119088380",
+            "x_pos":"52.180519",
+            "y_pos":"51.415939",
+            "x_ue4":"14953.999317",
+            "y_ue4":"9710.522107",
+            "z_ue4":"19.974365",
+            "tribename":"",
+            "decayDestructionTime":"0",
+            "lastInAllyRangeTime":"0",
+            "elapsedTime":"0"
+},"1119038380":{
+            "tribeid":"1119088380",
+            "x_pos":"52.30714",
+            "y_pos":"52.139179",
+            "x_ue4":"15822.374966",
+            "y_ue4":"14670.486726",
+            "z_ue4":"19.978271",
+            "tribename":"",
+            "decayDestructionTime":"0",
+            "lastInAllyRangeTime":"0",
+            "elapsedTime":"0"
+}},
+"players":{
+  "1119088380":{
+            "tribeid":"1119088380",
+            "x_pos":"30.248688",
+            "y_pos":"52.215595",
+            "x_ue4":"22279.5133",
+            "y_ue4":"15194.548743",
+            "z_ue4":"19.97827",
+            "tribename":"",
+            "decayDestructionTime":"0",
+            "lastInAllyRangeTime":"0",
+            "elapsedTime":"0"
+},"1842101346":{
+            "tribeid":"1842101346",
+            "x_pos":"54.379211",
+            "y_pos":"34.002789",
+            "x_ue4":"30032.630264",
+            "y_ue4":"41167.125231",
+            "z_ue4":"19.978272",
+            "tribename":"",
+            "decayDestructionTime":"0",
+            "lastInAllyRangeTime":"0",
+            "elapsedTime":"0"
 }
+}
+}}

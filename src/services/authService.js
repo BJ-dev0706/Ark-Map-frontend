@@ -49,19 +49,44 @@ export const Logout = () => {
   window.location.href="/";
 };
 
-// password reset
-export const requestPasswordReset = async (email) => {
-  try {    
-    const response = await axios.post(`${API_URL}/request-password-reset`, { email });
-    return response.data;
-  } catch (error) {
-    console.log(error);    
-    console.error('Password reset request failed:', error);
-    throw error;
-  }
-};
-
 // Get the current user token
 export const getCurrentUser = () => {
   return localStorage.getItem('token');
 };
+
+export const ChangePassword = async (id, current_password, new_password) => {
+  try {    
+    const response = await axios.post(`${API_URL}/auth/change/password`, { id, current_password, new_password });
+    message.success(response.data.message);
+  } catch (error) {
+    // Log the error for debugging purposes
+    console.error('Password reset request failed:', error);
+  
+    // Handle different types of errors based on the error response
+    if (error.response) {
+      // Server responded with a status code other than 2xx
+      const statusCode = error.response.status;
+  
+      // Customize error message based on the status code
+      if (statusCode === 400) {
+        message.error('Invalid request. Please check your input and try again.');
+      } else if (statusCode === 404) {
+        message.error('The requested resource was not found.');
+      } else if (statusCode === 500) {
+        message.error('Server error. Please try again later.');
+      } else {
+        message.error(`An error occurred: ${error.response.data.message || 'Something went wrong. Please try again later.'}`);
+      }
+    } else if (error.request) {
+      // Request was made but no response was received
+      message.error('No response from the server. Please check your network connection.');
+    } else {
+      // Something happened in setting up the request
+      message.error(`Request error: ${error.message}`);
+    }
+  
+    // Rethrow the error if necessary
+    throw error;
+  }
+  
+}
